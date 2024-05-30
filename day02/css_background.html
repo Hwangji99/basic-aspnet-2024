@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CSS backgroundImage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /* 배경이미지 */
+        body {
+            /* background-color: #a8a7a7;
+            background-image: url('./backtile.gif');
+            background-repeat: no-repeat;
+            background-position: top;
+            background-attachment: fixed; 
+            위에 내용을 한줄로 표현 ↓ */
+            background:  url('./backtile.gif') repeat fixed top #d3d3d3;
+        }
+
+        /* xx-small ~ xx-large, px, %, em... */
+        p {
+            font-size: 15px;
+            font-family: NanumGothic;
+            font-style: normal;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .test {
+            width: 300px; height: 150px;
+            background: #ff0000;
+            background: linear-gradient(90deg, #ff0000 0%, #00ff00 0%);
+            background: -webkit-linear-gradient(90deg, #ff0000 0%, #00ff00 0%);
+            background: -moz-linear-gradient(90deg, #ff0000 0%, #00ff00 0%);
+
+        }
+
+    </style>
+</head>
+<body>
+    <a href="https://www.naver.com">네이버</a>
+    <p>Lorem ipsum dolor, sit amet.</p>
+
+    <div class="test"></div>
+</body>
+</html>
