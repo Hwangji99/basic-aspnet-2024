@@ -153,6 +153,8 @@ IoT 개발자 과정  ASP.NET 리포지토리
         ```
         - @media 태그 : 디바이스 종류별로 CSS 따로 디자인 가능
         
+
+## 3일차(2024-05-31)
 - Javascript
     - 스크립트 언어, ECMAScript
     - 웹 브라우저에서 주로 사용
@@ -218,7 +220,49 @@ IoT 개발자 과정  ASP.NET 리포지토리
     - this 키워드
         - 객체에 있는 속성을 메서드에서 사용하고 싶을 때는 자신이 가진 속성임을 분명하게 표시해야 함
 
-    - DOM(Document Object Model : 문서 객체)
+    - 문서 객체
         - 태그를 자바스크립트에서 사용할 수 있는 객체로 만든 것
         - 문서 객체를 조작한다는 말은 결국 태그를 조작한다는 의미
+
+    - DOM(Document Object Model : 문서 객체 모델)
+        - 웹 브라우저가 HTML 파일을 분석하고 출력하는 방식
+        - HTML에 있는 모든 요소를 제어할 수 있음
+        - html 애니메이션, 게임, 통신 모두 가능
+        - 이벤트 on- 으로 시작
+            - onload : 화면이 다 렌더링되면 그 다음 발생
+            - onfocus: 객체에 마우스를 클릭해서 포커스가 가면 발생
+            - onclick : 객체를 마우스로 클리하면 발생
+            - ondbclick : 더블클릭
+            - onmousemove : 마우스를 이동하면 발생
+            - onmouseover : 객체 위에 마우스가 올라가면 발생
+            - onkeydown, onkeypress : 객체에서 키보드를 타이핑하면 발생
+
+
+        - 기본 용어
+            - 요소 노드 : <h1> 태그와 <script> 태그처럼 요소를 생성하는 노드
+            - 텍스트 노드 : 화면에 출력되는 문자열
+            - 정적 생성 : 웹 페이지를 처음 실행할 때 HTML 태그로 적힌 문서 객체를 생성하는 것
+            - 동적 생성 : 웹 페이지를 실행 중에 자바스크립트를 사용해 문서 객체를 생성하는 것
+
+        - 문서 객체 선택
+            - 1개 선택
+                - document.getElementById(아이디)
+                - document.getElementBySelector(선택자)
+            - 여러 개 선택
+                - document.getElementsByName(이름) : name 속성으로 여러 개 선택
+                - document.getElementsByClassName(클래스) : class 속성으로 여러 개 선택
+                - document.querySelectorAll(선택자) : 선택자로 여러개 선택
+    
+    - jQuery
+        - 자바스크립트 라이브러리
+        - js를 매우 편리하게 사용할 수 있도록 도와주는 서포트 라이브러리
+        - 순식간에 웹 개발 업계를 장악했던 라이브러리
+        - 사용빈도가 줄고는 있지만 아직도 80% 웹사이트가 사용 중
+        - js 파일 다운로드 후 사용
+        -  CDN 링크를 사용(추천)
+
+## 4일차(2024-06-03)
+- HTML + CSS + js(jQuery) 응용
+    - 
+        
 
