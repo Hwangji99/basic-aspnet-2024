@@ -305,7 +305,8 @@ IoT 개발자 과정  ASP.NET 리포지토리
             - https://startbootstrap.com/
     
     - 웹페이지 클로닝
-        - 
+        - 핀터레스트 타입의 웹페이지 만들기(진행중)
 
-        
-
+## 5일차(2024-06-03)
+- HTML + CSS + js(jQuery) 응용
+    - 웹페이지 클로닝
