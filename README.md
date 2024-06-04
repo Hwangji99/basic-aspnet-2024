@@ -314,10 +314,10 @@ IoT 개발자 과정  ASP.NET 리포지토리
         - 부트스트랩 아이콘 넣기 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-     - 실행결과
+        - 실행결과
 
 
-    https://github.com/Hwangji99/basic-aspnet-2024/assets/158007430/a4e54af7-ef70-4876-a1a4-c051d4ce0fab
+        https://github.com/Hwangji99/basic-aspnet-2024/assets/158007430/a4e54af7-ef70-4876-a1a4-c051d4ce0fab
 
 
     
@@ -326,5 +326,5 @@ IoT 개발자 과정  ASP.NET 리포지토리
 
 
 
-    <img src ="https://github.com/Hwangji99/basic-aspnet-2024/blob/main/images/an001.png" width="730" alt="Codehal 로그인창 따라하기>
+    <img src ="https://github.com/Hwangji99/basic-aspnet-2024/blob/main/images/an001.png" width="730" alt="Codehal 로그인창 따라하기">
     
