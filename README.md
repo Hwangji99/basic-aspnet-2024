@@ -323,8 +323,14 @@ IoT 개발자 과정  ASP.NET 리포지토리
     
     - Codehal 유튜버 로그인 웹페이지 튜토리얼 따라하기(https://www.youtube.com/@codehal)
     - 아이콘 사용(https://boxicons.com/)
-
+    ```html
+    <head>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    ```
 
 
     <img src ="https://github.com/Hwangji99/basic-aspnet-2024/blob/main/images/an001.png" width="730" alt="Codehal 로그인창 따라하기">
+
+    - Codehal 슬라이더 애니메이션 웹페이지 튜토리얼 따라하기
     
