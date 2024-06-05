@@ -340,11 +340,13 @@ IoT 개발자 과정  ASP.NET 리포지토리
     - 웹페이지 클로닝
         - [x]Codegal 슬라이더 애니메이션 웹페이지 튜토리얼 따라하기
 
-        
+
 
 https://github.com/Hwangji99/basic-aspnet-2024/assets/158007430/b10c9dba-d545-4493-b085-c4918b12d515
 
 
 
-    - 개인 웹페이지 클로닝
-        - 
+    
+    
+- 개인 웹페이지 클로닝
+    - 
