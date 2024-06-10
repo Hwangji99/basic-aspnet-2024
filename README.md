@@ -335,18 +335,61 @@ IoT 개발자 과정  ASP.NET 리포지토리
     - Codehal 슬라이더 애니메이션 웹페이지 튜토리얼 따라하기
     
 
-## 6일차(2024-06-05)
+## 6~8일차(2024-06-05)
 - HTML + CSS + js(jQuery) 응용
     - 웹페이지 클로닝
         - [x]Codegal 슬라이더 애니메이션 웹페이지 튜토리얼 따라하기
 
 
+        https://github.com/Hwangji99/basic-aspnet-2024/assets/158007430/b10c9dba-d545-4493-b085-c4918b12d515
 
-https://github.com/Hwangji99/basic-aspnet-2024/assets/158007430/b10c9dba-d545-4493-b085-c4918b12d515
-
-
-
-    
     
 - 개인 웹페이지 클로닝
-    - 
+
+## 9일차(2024-06-10)
+- ASP.NET
+    - ASP.NET 역사
+        - 1990년대 NS가 웹 서버 기술로 ASP(Active Server Page)를 배포. like JSP(Java Server Page)
+        - ASP는 .NET으로 된 언어가 아닌, VB(Visual Basic)Script를 사용. 확장자(.asp)
+        - 개발이 무지 쉬워서 많이 사용
+        - 스파게티 코드! - HTML + CSS + javascript + VBscript 섞어 만든 웹 페이지
+        - 많이 사용 되었지만 유지보수가 어렵고, 성능이 나쁨
+
+        - 2000년대 초반 MS가 .NET Framework를 발표
+        - C#, VB.NET, C++.NET 등의 새로운 언어를 배포, 여기에 맞춰서 웹 서버 기술을 다시 만듦 -> ASP.NET(.aspx)
+        - 가장 큰 장점은 윈폼 개발하는 것처럼 웹개발을 할 수 있었음
+        - 초창기에 스파게티 코드를 거의 그대로 사용, 성능도 안좋음
+        - 2009년 ASP.NET MVC(Model View Controller 디자인 패턴) 공표. 성능은 좋아짐
+        - 하지만, 윈도우에서만 동작
+
+        - 2016년 모든 OS플랫폼에서 동작할 수 있는 .NET Core를 재출시
+        - 웹서버 기술을 또 다시 만듦 -> ASP.NET Core
+
+    - .NET Core(현재는 .NET 9.0, Core라는 이름은 사용안함)의 장점
+        - 빠르고 오픈소스
+        - 크로스 플랫폼, OS에 종속받지 않음
+        - 성능!
+
+    - ASP.NET 종류
+        - ~~ASP.NET Webforms - 2000년도 초반에 나오다가 사장된 웹사이트 개발 기술~~
+        - JS(Vue, Angular, React) 프론트엔드 + ASP.NET Core 백엔드
+        - **ASP.NET Core 웹 API - 데이터포털, 네이버, 카카오, 영화 API 사이트를 만드는 백엔드(프론트엔드가 없어서 화면이 없음)**
+        - **ASP.NET Core 웹앱(MVC) - 가장 기본적인 프론트엔드(HTML, CSS, JS .html) + 백엔드(C# .aspx.cs) 웹 사이트 개발**
+        - ~~Edge용 웹 드라이버 테스트 - 엣지 브라우저에 종속된 테스트용~~
+        - ASP.NET Core gRPC 서비스 - 고성능 원격 프로시저 호출(스트리밍 호출) 서비스
+        - Blazor - JS 프론트엔드를 따라서 컴포넌트 기반으로 개발하는 웹개발 방식 웹사이트 개발
+        - Razor - 프론트엔드 개발에 C# 코드가 특화되서 사용되는 웹사이트 개발방식
+        - .NET Aspire - Blazor 프론트엔드 + Redis + 웹 API 백엔드
+
+    - 참조 사이트
+        - https://learn.microsoft.com/ko-kr/aspnet/core/?view=aspnetcore-3.1
+        - https://github.com/dotnet
+        - https://mixedcode.com/
+        - https://github.com/gilbutITbook/006824
+
+    - ASP.NET Core 웹앱(Model-View-Controller)
+        - 현재 기본적인 웹개발의 가장 표준
+        - Java 계열도 Spring (Boot) MVC로 개발
+        - MVC 개념도
+
+            <img src=>
