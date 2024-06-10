@@ -392,4 +392,4 @@ IoT 개발자 과정  ASP.NET 리포지토리
         - Java 계열도 Spring (Boot) MVC로 개발
         - MVC 개념도
 
-            <img src=>
+            <img src="https://raw.githubusercontent.com/Hwangji99/basic-aspnet-2024/main/images/an0002.png" width="730">
