@@ -11,6 +11,7 @@ namespace BasicDbHandling.Models
     {
         [Key] // PK
         public int Id { get; set; }
+
         [Required] // Not NULL
         public string Name { get; set; }
         public int DisplayOreder { get; set; }
