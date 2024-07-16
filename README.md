@@ -7,7 +7,7 @@ IoT 개발자 과정  ASP.NET 리포지토리
     - Full Stack
     - Front-end : 웹사이트 화면으로 사람들에게 보이는 부분 기술
     - Back-end : 웹사이트 뒤에서 동작하는 서버 기술
-    - Server-Operation : HW, OS, SW 등 운영(클라우드)
+    - Server-Operation : HW, OS, SW 등 운영(클라우드), 도커, 쿠버네티스
 
 - 업무용 웹 사이트 참조
     - https://www.ecount.com/kr/ECK/ECK004M_CN.aspx
@@ -15,7 +15,7 @@ IoT 개발자 과정  ASP.NET 리포지토리
 - Front-end(클라이언트)
     - HTML5
     - CSS3
-    - Javascript()
+    - Javascript
 
 - Back-end(서버)
     1. Java - Spring, Spring Boot, JSP, EJB ...
@@ -26,10 +26,10 @@ IoT 개발자 과정  ASP.NET 리포지토리
     5. C - cgi,fasCGI ...
     7. PHP
 
-- 개발
+- 웹 개발
     - 프로트엔드 전부 + 백엔드 여러개 중 하나 + DB
-    - 웹 브라우저에서 F12(개발자 도구)
-    - VS Code 플러그인
+    - 웹 브라우저에서 개발자 도구(F12 활용)
+    - VS Code 플러그인 - 프론트엔드
         - HTML Code Snippet
         - Live Server
 
@@ -348,12 +348,19 @@ IoT 개발자 과정  ASP.NET 리포지토리
 
 ## 8일차(2024-06-10)
 - ASP.NET
+    - 웹퍼블리시 - HTML, CSS, Javascript만 가지고 웹페이지만 개발
+    - 프론트엔드 개발자 - 웹퍼블리시가 만든 웹페이지에 백엔드와 연계를 해서 실제 동작하는 페이지를 개발(개발자)
+        - json, 백엔드, DB 전반적인 개발 지식 필요
+
     - ASP.NET 역사
         - 1990년대 NS가 웹 서버 기술로 ASP(Active Server Page)를 배포. like JSP(Java Server Page)
         - ASP는 .NET으로 된 언어가 아닌, VB(Visual Basic)Script를 사용. 확장자(.asp)
         - 개발이 무지 쉬워서 많이 사용
         - 스파게티 코드! - HTML + CSS + javascript + VBscript 섞어 만든 웹 페이지
+            - 프론트엔드 + 백엔드 소스가 모두 한페이지에
+            - 다만, 현재 프론트엔드도 백엔드 소스가 일부는 포함되어 있음
         - 많이 사용 되었지만 유지보수가 어렵고, 성능이 나쁨
+
 
         - 2000년대 초반 MS가 .NET Framework를 발표
         - C#, VB.NET, C++.NET 등의 새로운 언어를 배포, 여기에 맞춰서 웹 서버 기술을 다시 만듦 -> ASP.NET(.aspx)
@@ -364,10 +371,11 @@ IoT 개발자 과정  ASP.NET 리포지토리
 
         - 2016년 모든 OS플랫폼에서 동작할 수 있는 .NET Core를 재출시
         - 웹서버 기술을 또 다시 만듦 -> ASP.NET Core
+        - ASP.NET은 C#이 아닌 다른 .NET 언어로도 개발 가능 그 중에서 C#을 사용
 
     - .NET Core(현재는 .NET 9.0, Core라는 이름은 사용안함)의 장점
         - 빠르고 오픈소스
-        - 크로스 플랫폼, OS에 종속받지 않음
+        - **크로스 플랫폼**, OS에 종속받지 않음
         - 성능!
 
     - ASP.NET 종류
