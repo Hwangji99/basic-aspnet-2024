@@ -481,7 +481,7 @@ IoT 개발자 과정  ASP.NET 리포지토리
 
         <img src="https://raw.githubusercontent.com/Hwangji99/basic-aspnet-2024/main/images/an0004.png" width="730">
 
-## 10일차(2024-07-16)
+## 10일차(2024-07-18)
 - ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
     1. Board.cs 멤버속성 ModeDate -> ModDate
         - BoardController.cs에서 ModeDate -> ModDate변경
@@ -504,7 +504,7 @@ IoT 개발자 과정  ASP.NET 리포지토리
         5. Models/Board.cs ModDate를 DateTime -> DateTime? 변경
         6. Edit 동일, Create.cshtml 내용을 그대로 복사/붙여넣기 단, asp-action="Edit"로 변경 
 
-## 11일차(2024-07-17)
+## 11일차(2024-07-)
 - ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
     7. 페이징(1페이지, 2페이지 이런걸 만드는 것)
     8. 회원가입, 로그인
