@@ -484,8 +484,28 @@ IoT 개발자 과정  ASP.NET 리포지토리
 ## 10일차(2024-07-16)
 - ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
     1. Board.cs 멤버속성 ModeDate -> ModDate
-    2. 테이블 삭제, 재생성
-    3. 게시판 관련된 화면 수정 작업
-    4. 페이징(1페이지, 2페이지 이런걸 만드는 것)
-    5. 회원가입, 로그인
-    6. 관리자모드/페이지
+        - BoardController.cs에서 ModeDate -> ModDate변경
+        - views/Board/*.cshtml ModeDate -> ModDate변경
+    2. ASP.NET Core 템플릿으로 만들어주는 CRUD(Insert, Select, Update, Delete)
+    3. 테이블 삭제, 재생성
+    4. 게시판 관련된 화면 수정 작업
+        - Views/Board/Index.cshtml 게시판 리스트화면 수정
+        - Index.cshtml 테이블 툴 변경, 삭제, 수정, 상세버튼 삭제
+        - Models/Board.cs에 테이블 한글이름 추가 DisplayName()
+        - Views/Boeard/Details.cshtml 부트스트랩 적용
+        - 수정, 삭제 등 버튼 디자인적용
+        - Views/Board/Create.cshtml 부트스트랩 적용
+    5. SSMS에서 Board테이블에 Hit, Regdate, ModDate Null 허용으로 변경
+    6. 웹사이트 동작 순서
+        1. https://localhost:7069/Board/Create 링크오픈
+        2. BoardController -> Create 액션메서드
+        3. Submit -> BoardController -> Create 액션메서드 발동
+        4. Create 액션 메서드 내 로직처리 DB에 데이터 입력
+        5. Models/Board.cs ModDate를 DateTime -> DateTime? 변경
+        6. Edit 동일, Create.cshtml 내용을 그대로 복사/붙여넣기 단, asp-action="Edit"로 변경 
+
+## 11일차(2024-07-17)
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    7. 페이징(1페이지, 2페이지 이런걸 만드는 것)
+    8. 회원가입, 로그인
+    9. 관리자모드/페이지
