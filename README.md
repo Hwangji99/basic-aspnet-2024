@@ -542,6 +542,12 @@ IoT 개발자 과정  ASP.NET 리포지토리
             3. Index() 내 로직 수정
             4. Views/Board/Index.cshtml 화면코드 수정
 
+            
+
+        https://github.com/user-attachments/assets/63468669-ea47-4600-9993-8c4c2aa2f5f9
+
+
+
     5. 검색
         - FromSqlRaw() 메서드 변경
         - html 링크에 ?page=1&search=검색어 추가
