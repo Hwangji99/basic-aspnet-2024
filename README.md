@@ -346,6 +346,37 @@ IoT 개발자 과정  ASP.NET 리포지토리
     
 - 개인 웹페이지 클로닝
 
+
+        
+
+    https://github.com/user-attachments/assets/3cfcdfa6-30e6-43c0-a4dc-273b2c818dfd
+    
+    
+    
+    
+    
+    https://github.com/user-attachments/assets/c23b2232-d95c-4e05-a2f1-7bad5214b185
+    
+
+
+    
+    
+    https://github.com/user-attachments/assets/731f0c5a-ab40-4749-bf10-4f58d24d8681
+    
+    
+
+
+    
+    https://github.com/user-attachments/assets/4815217d-e794-4fa6-a6ef-c857ef41022d
+
+
+    
+    
+    https://github.com/user-attachments/assets/1951045a-29c4-4b81-a7a6-07ef92ac2f67
+
+
+
+
 ## 8일차(2024-06-10)
 - ASP.NET
     - 웹퍼블리시 - HTML, CSS, Javascript만 가지고 웹페이지만 개발
