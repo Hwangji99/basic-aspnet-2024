@@ -504,20 +504,20 @@ IoT 개발자 과정  ASP.NET 리포지토리
         5. Models/Board.cs ModDate를 DateTime -> DateTime? 변경
         6. Edit 동일, Create.cshtml 내용을 그대로 복사/붙여넣기 단, asp-action="Edit"로 변경 
 
-## 11일차(2024-07-)
+## 11일차(2024-07-23)
 - ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
-    0. EntityFramework로 SQL 사용없이 DB 핸들링
+    1. EntityFramework로 SQL 사용없이 DB 핸들링
         - DbContext.Add(삽입), Update(수정), Remove(삭제) 기능 존재
         - 위의 명령을 실행한 후 DbContext.SaveChangesAsync() 실행에서 실제 DB에 반영
         - ToListAsync(), FirstOrDefaultAsync()는 SELECT로 트랜잭션이 발생X, 그래서 SaveChangesAsync()를 실행하지 않음
 
-    1. 글 조회수 올리기
+    2. 글 조회수 올리기
 
-    2. 게시글 삭제
+    3. 게시글 삭제
         - _Layout.cshtml의 @await RenderSectionAsync("Scripts", required: false) 이 각 페이지에 필요 시 스크립트 영역을 만들어 써라는 의미
         - AJAX 삭제는 나중에 다시!!
 
-    3. 페이징(1페이지, 2페이지 이런걸 만드는 것)
+    4. 페이징(1페이지, 2페이지 이런걸 만드는 것)
         - 웹사이트에서 가장 중요한 기능 중 하나
         - 한 페이지에 표시할 수 있는 글의 수를 제한
         - 스크롤 페이징, 번호 페이징
@@ -542,17 +542,23 @@ IoT 개발자 과정  ASP.NET 리포지토리
             3. Index() 내 로직 수정
             4. Views/Board/Index.cshtml 화면코드 수정
 
-    4. 검색
+    5. 검색
         - FromSqlRaw() 메서드 변경
         - html 링크에 ?page=1&search=검색어 추가
 
-    5. HTML 에디터
+    6. HTML 에디터
         - markdown 에디터
         - simlemde(https://simplemde.com)
         - _Layout.cshtml에 js, css 링크만 추가
         - 실제 사용페이지에서 특정 js만 실행
         - Create.cshtml, Edit.cshtml은 동일하게 작업
-        - NuGet패키지 -> Westwind
+        - NuGet패키지 -> Westwind.AspNetCore.Markdown 검색
 
-    6. 회원가입, 로그인
-    7. 관리자모드/페이지
+        <img src="https://raw.githubusercontent.com/Hwangji99/basic-aspnet-2024/main/images/an0005.png" width="730">
+
+
+## 12일차(2024-07-24)
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. 삭제로직 수정
+    2. 회원가입, 로그인
+    3. 관리자모드/페이지
