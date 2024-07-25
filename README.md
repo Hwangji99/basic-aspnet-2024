@@ -630,10 +630,29 @@ IoT 개발자 과정  ASP.NET 리포지토리
 
 
            
-
     2. 게시판 글 오류 수정
-    3. 이력서, 프로젝트, 컨텍트 페이지 구현
-    4. 관리자모드/페이지
-    5. 자신 컴퓨터 IIS 서버에 웹사이트 올리기
-    6. AWS 라이트세일로 웹사이트 공개하기
-    7. 부트스트랩 템플릿 커스터마이징, 자기 포트폴리오 사이트 만들기
+        1. Board.cs에 있는 Name, UserID를 삭제, User는 Nullable로 변경, Username을 virtual로 추가
+        2. BoardController.cs 있는 Board 클래스와 관련된 변수도 삭제
+        3. Views/Board/*.cshtml Name, UserID를 삭제, 변경
+        4. BoardController.cs 게시글 리스트 쿼리 변경
+        5. Views/Board/*.cshtml 수정
+        6. BoardController.cs에 Create Post 메서드에 사용자데이터 추가수정
+
+    3. 프로젝트 파일업로드
+        1. Project.cs 모델 생성
+        2. AppDbContext.cs에 DbSet<Project> 추가
+        3. Add-Migration, Update-Database
+        4. ProjectController, View 생성
+        5. Views/Project/Create.cshtml 수정
+        6. ProjectController, Create Post 메서드 수정
+
+## 14일차(2024-07-26)
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. AWS 라이트세일로 웹사이트 공개하기
+    2. 자신 컴퓨터 IIS 서버에 웹사이트 올리기
+    3. 프로젝트 화면 DB 연동하기
+    4. Contact 메일보내기
+
+## 14일차(2024-07-29)
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. 부트스트랩 템플릿 커스터마이징, 자기 포트폴리오 사이트 만들기

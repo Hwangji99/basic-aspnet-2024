@@ -54,23 +54,26 @@ namespace MyPortfolio.Controllers
 
             //var StartCount = new SqlParameter("StartCount", startCount);
             //var EndCount = new SqlParameter("EndCount", endCount);
+            // 쿼리는 나중에 수정필요!!
             var list = _context.Board.FromSqlRaw<Board>(@$"
-                SELECT * 
-                  FROM (
-                        SELECT ROW_NUMBER() OVER (ORDER BY Id DESC) AS rowNum
-                                                                      , Id
-                                                                      , Name
-                                                                      , UserId
-                                                                      , Title
-                                                                      , Contents
-                                                                      , Hit
-                                                                      , RegDate
-                                                                      , ModDate 
-                                                                      FROM Board
-                                                                     WHERE Title LIKE '{search}%'
-                                                                    ) AS base
-                                                                     WHERE base.rowNum BETWEEN {startCount} AND {endCount}
-                                                                    ").ToList();
+                SELECT *
+                          FROM (
+                                SELECT ROW_NUMBER() OVER (ORDER BY b.Id DESC) AS rowNum
+                                     , b.Id
+                                     , b.UserId
+                                     , b.UserName AS UserName1
+                                     , b.Title   
+                                     , b.Contents
+                                     , b.Hit
+                                     , b.RegDate
+                                     , b.ModDate
+                                     , u.UserName
+                                  FROM Board AS b
+                                  LEFT JOIN [User] AS u
+                                    ON b.UserId = u.Id
+                                 WHERE b.Title LIKE '%{search}%'
+                               ) AS base
+                         WHERE base.rowNum BETWEEN {startCount} AND {endCount}").ToList();
 
             return View(list);
         }
@@ -85,15 +88,19 @@ namespace MyPortfolio.Controllers
             }
 
             var board = await _context.Board
+                .Include(u  => u.User!) // Null로 관계가 형성된 부모/자식의 객체 값도 같이 포함시켜서 보여달라
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (board == null)
             {
                 return NotFound();
             }
-            // 게시글 조회수를 1 증가
-            board.Hit += 1;
+
+            board.Hit = board.Hit == null ? 1 : board.Hit + 1;
+            // board.Hit += 1; // 게시글 조회수를 1 증가
             _context.Update(board); // 객체에 내용 반영
             await _context.SaveChangesAsync(); // 실제 DB를 변경
+
 
             return View(board); // 게시글 하나를 뷰로 던져줘
         }
@@ -102,6 +109,13 @@ namespace MyPortfolio.Controllers
         // 링크를 클릭해서 화면이 전환됨
         public IActionResult Create()
         {
+            if (HttpContext.Session.GetInt32("USER_LOGIN_KEY") == null)
+            {
+                // 로그인을 안했으니 로그인창으로 가라
+                return RedirectToAction("Login");
+            }
+
+            ViewData["USER_NAME"] = HttpContext.Session.GetString("USER_NAME");
             // Views/Board/Create.cshtml 화면을 출력
             return View();
         }
@@ -111,12 +125,21 @@ namespace MyPortfolio.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,UserId,Title,Contents,Hit,RegDate,ModeDate")] Board board)
+        public async Task<IActionResult> Create([Bind("Id,Title,Contents,Hit,RegDate,ModeDate")] Board board)
         {
             // 아무값도 입력하지 않으면 ModelState.IsValid는 false
             if (ModelState.IsValid)
             {
-                board.ModDate = null;
+                // 사용자 객체 가져옴
+                User currUser = await _context.User.FirstOrDefaultAsync(u => u.UserEmail == HttpContext.Session.GetString("USER_EMAIL"));
+
+                if (currUser == null)
+                {
+                    return RedirectToAction("Index"); 
+                }
+
+                board.User = currUser;
+                board.RegDate = DateTime.Now;
                 _context.Add(board);    // DB 객체에 저장
                 // DB Insert to Commit 실행
                 await _context.SaveChangesAsync();
@@ -129,6 +152,12 @@ namespace MyPortfolio.Controllers
         // GET: Board/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (HttpContext.Session.GetInt32("USER_LOGIN_KEY") == null)
+            {
+                // 로그인을 안했으니 로그인창으로 가라
+                return RedirectToAction("Login");
+            }
+
             if (id == null)
             {
                 return NotFound();
@@ -147,7 +176,7 @@ namespace MyPortfolio.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,UserId,Title,Contents,Hit,RegDate,ModeDate")] Board board)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Contents,Hit,RegDate,ModeDate")] Board board)
         {
             if (id != board.Id)
             {

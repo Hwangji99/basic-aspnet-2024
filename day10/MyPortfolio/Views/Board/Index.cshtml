@@ -30,9 +30,12 @@
     <div class="container px-5">
         <div class="row justify-content-between p-2">
             <div class="col-3">
+                @if (Context.Session.GetInt32("USER_LOGIN_KEY") != null)
+                {
                 <a asp-controller="Board" asp-action="Create" class="btn btn-primary">
                     <i class="bi bi-file-earmark-plus-fill"></i>&nbsp;글 작성
                 </a>
+                }
             </div>
             <div class="col-9 text-end">
                 <form asp-action="Index" method="GET">
@@ -48,11 +51,8 @@
                     <th style="width:3rem">
                         번호
                     </th>
-                    <th style="width:8rem;">
-                        @Html.DisplayNameFor(model => model.Name)
-                    </th>
                     <th style="width:10rem;">
-                        @Html.DisplayNameFor(model => model.UserId)
+                        @Html.DisplayNameFor(model => model.UserName)
                     </th>
                     <th style="width:17rem;">
                         @Html.DisplayNameFor(model => model.Title)
@@ -78,10 +78,7 @@
                     <tr>
                         <td class="text-end pe-4">@(num--)</td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.UserId)
+                            @Html.DisplayFor(modelItem => item.UserName)
                         </td>
                         <td>
                             <a asp-asp-controller="Board" asp-action="Details" asp-route-id="@item.Id">
