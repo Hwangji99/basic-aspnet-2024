@@ -20,7 +20,7 @@ namespace MyPortfolio
             // 로그인 세션 설정
             builder.Services.AddSession(options =>
             {
-                options.Cookie.Name = "Hwangji99 PortfolioSession"; // 웹앱 세션 쿠키 이름
+                options.Cookie.Name = "Hwangji99_PortfolioSession"; // 웹앱 세션 쿠키 이름 // 스페이스바(공백)가 들어가면 안됨 _가 들어가야함 // 여기서 오류뜨면 어디서 에러가 뜨는지 모름 ★★★★
                 options.IdleTimeout = TimeSpan.FromMinutes(20); // 세션지속시간 20~30분이 적당
             }).AddControllersWithViews(); // 세션의 내용을 cshtml에도 적용한다
 

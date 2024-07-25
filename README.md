@@ -619,6 +619,12 @@ IoT 개발자 과정  ASP.NET 리포지토리
 ## 13일차(2024-07-25)
 - ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
     1. 회원가입 계속
+        1. Register.cshtml에 asp-for등 C# Razor tag로 변경
+        2. HomeController.cs Register Post 메서드 작성
+        3. Login.cshtml에 C# Razor tag로 변경
+        4. HomeController.cs Login Post 메서드 작성
+        5. Logout Get 메서드 추가
+        
     2. 이력서, 프로젝트, 컨텍트 페이지 구현
     3. 관리자모드/페이지
     4. 자신 컴퓨터 IIS 서버에 웹사이트 올리기
